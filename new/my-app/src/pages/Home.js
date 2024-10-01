@@ -2,26 +2,29 @@ import React, { useContext } from 'react';
 import './Home.css';
 import ProductCard from '../components/ProductCard';
 import { CartContext } from '../components/CartContext';
-
+import Luxurywatch from '../assets/watch.jpg';
+import sportwatch from '../assets/apple watch.jpg';
+import mainphoto from '../assets/images.jpg'
 const Home = () => {
   const products = [
     {
       id: 1,
       name: 'Luxury Watch',
       price: 299.99,
-      // image: '/images/luxury-watch.jpg',
+      image: Luxurywatch,
+      
     },
     {
       id: 2,
       name: 'Sport Watch',
       price: 199.99,
-      // image: '/images/sport-watch.jpg',
+      image: sportwatch,
     },
     {
       id: 3,
       name: 'Classic Watch',
       price: 149.99,
-      // image: '/images/classic-watch.jpg',
+      image: Luxurywatch,
     },
   ];
 
@@ -34,6 +37,7 @@ const Home = () => {
         <h1>Discover Our Exclusive Collection</h1>
         <p>Shop the finest watches, crafted to perfection.</p>
         <a href="/products" className="button">Shop Now</a>
+        <img src= {mainphoto} alt='bg'></img>
       </section>
 
       {/* Product Listing Section */}

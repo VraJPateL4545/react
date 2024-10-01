@@ -1,38 +1,31 @@
-import React, { useContext } from 'react';
-import './Cart.css';
-import { CartContext } from '../components/CartContext';
+// src/pages/Cart.js
+import React from 'react';
+import { useCart } from '../components/CartContext'; // Import useCart
 
 const Cart = () => {
-  const { cartItems } = useContext(CartContext);
+    const { cartItems } = useCart(); // Access cart items
 
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
+    const totalAmount = cartItems.reduce((total, item) => total + item.price, 0).toFixed(2);
 
-  return (
-    <div className="cart-page">
-      <h1>Your Shopping Cart</h1>
-      {cartItems.length === 0 ? (
-        <p>Your cart is empty.</p>
-      ) : (
-        <>
-          <div className="cart-items">
-            {cartItems.map((item, index) => (
-              <div key={index} className="cart-item">
-                <img src={item.image} alt={item.name} />
+    return (
+        <div className="cart-container">
+            <h1>Your Cart</h1>
+            {cartItems.length === 0 ? (
+                <p>Your cart is empty</p>
+            ) : (
                 <div>
-                  <h3>{item.name}</h3>
-                  <p>${item.price.toFixed(2)}</p>
+                    {cartItems.map((item, index) => (
+                        <div key={index} className="cart-item">
+                            <h2>{item.name}</h2>
+                            <p>Price: ${item.price.toFixed(2)}</p>
+                        </div>
+                    ))}
+                    <h2>Total Amount: ${totalAmount}</h2>
+                    <button>Checkout</button> {/* Implement your checkout logic here */}
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className="cart-total">
-            <h2>Total: ${totalPrice.toFixed(2)}</h2>
-            <button className="checkout-button">Proceed to Checkout</button>
-          </div>
-        </>
-      )}
-    </div>
-  );
+            )}
+        </div>
+    );
 };
 
 export default Cart;

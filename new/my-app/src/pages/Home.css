@@ -1,44 +1,46 @@
+/* src/App.css */
 .home {
   text-align: center;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #eef2f3; /* Slightly lighter background for contrast */
   font-family: 'Arial', sans-serif;
 }
 
 /* Hero Section */
 .hero {
-  /* background: url('/images/hero-image.jpg') center/cover no-repeat; */
+  /* background: url('/images/hero-image.jpg') center/cover no-repeat; Uncommented for the hero background */
   color: white;
   padding: 80px 20px;
-  border-radius: 8px;
+  border-radius: 10px; /* Increased border-radius for a softer look */
   margin-bottom: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow for depth */
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem; /* Increased font size for better visibility */
   margin-bottom: 15px;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7); /* More pronounced text shadow */
 }
 
 .hero p {
-  font-size: 1.4rem;
+  font-size: 1.5rem; /* Larger font size for readability */
   margin-bottom: 25px;
 }
 
+/* Button Styles */
 .button {
-  padding: 15px 25px;
-  background-color: #f39c12;
+  padding: 15px 30px; /* Slightly larger padding */
+  background-color: #f39c12; /* Main color */
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1.2rem; /* Increased font size */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smoother transitions */
 }
 
 .button:hover {
   background-color: #e67e22;
-  transform: translateY(-3px);
+  transform: translateY(-4px); /* Increased lift on hover */
 }
 
 /* Product Listing Section */
@@ -47,15 +49,16 @@
 }
 
 .product-list h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem; /* Increased font size */
   margin-bottom: 30px;
+  color: #333; /* Darker color for contrast */
 }
 
 .product-list-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 20px; /* Space between product items */
 }
 
 /* Footer Section */
@@ -68,7 +71,7 @@
 }
 
 .footer a {
-  color: #f39c12;
+  color: #f39c12; /* Highlight color for links */
   text-decoration: none;
 }
 
@@ -79,46 +82,47 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem; /* Responsive font size */
   }
 
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Responsive paragraph size */
   }
 
   .button {
-    padding: 12px 20px;
+    padding: 12px 25px; /* Adjusted padding for mobile */
     font-size: 1rem;
   }
 
   .product-list-items {
-    flex-direction: column;
+    flex-direction: column; /* Stack items on small screens */
+    align-items: center; /* Center align items */
   }
 
   .footer {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Adjust footer font size */
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 60px 15px;
+    padding: 50px 10px; /* Adjusted padding for very small screens */
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem; /* Smaller heading for mobile */
   }
 
   .hero p {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Smaller paragraph for mobile */
   }
 
   .button {
-    padding: 10px 15px;
+    padding: 10px 20px; /* Smaller button padding */
     font-size: 0.9rem;
   }
 
   .footer {
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* Smaller footer text */
   }
 }
