@@ -24,7 +24,7 @@ const products = [
     name: 'Classic Watch',
     description: 'A classic watch that never goes out of style.',
     price: 199.99,
-    image: 'path/to/your/image3.jpg',
+    image: Luxurywatch, // You can replace with actual image path
   },
 ];
 

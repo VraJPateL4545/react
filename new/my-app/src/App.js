@@ -8,7 +8,10 @@ import Products from './pages/Products';
 import Cart from './pages/Cart';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
-import ErrorBoundary from './components/ErrorBoundary'; // Import ErrorBoundary
+Import ErrorBoundary
+// import Cart from './pages/Cart';
+import Success from './pages/Success';
+import Cancel from './pages/Cancel';
 import './App.css';
 
 const App = () => {
@@ -23,6 +26,8 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/success" component={Success} />
+              <Route path="/cancel" component={Cancel} />
               <Route path="/login" element={<SignIn />} />
               <Route path="/signup" element={<SignUp />} />
             </Routes>

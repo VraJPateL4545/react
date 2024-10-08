@@ -1,128 +1,88 @@
-/* src/App.css */
+/* src/pages/Home.css */
 .home {
-  text-align: center;
   padding: 20px;
-  background-color: #eef2f3; /* Slightly lighter background for contrast */
   font-family: 'Arial', sans-serif;
 }
 
-/* Hero Section */
+/* Hero Section Styling */
 .hero {
-  /* background: url('/images/hero-image.jpg') center/cover no-repeat; Uncommented for the hero background */
-  color: white;
-  padding: 80px 20px;
-  border-radius: 10px; /* Increased border-radius for a softer look */
-  margin-bottom: 30px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow for depth */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+  max-width: 50%;
 }
 
 .hero h1 {
-  font-size: 3.5rem; /* Increased font size for better visibility */
+  font-size: 2.5rem;
   margin-bottom: 15px;
-  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7); /* More pronounced text shadow */
 }
 
 .hero p {
-  font-size: 1.5rem; /* Larger font size for readability */
-  margin-bottom: 25px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-/* Button Styles */
-.button {
-  padding: 15px 30px; /* Slightly larger padding */
-  background-color: #f39c12; /* Main color */
+.hero .button {
+  background-color: #4CAF50;
   color: white;
+  padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 1.2rem; /* Increased font size */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smoother transitions */
+  transition: background-color 0.3s ease;
 }
 
-.button:hover {
-  background-color: #e67e22;
-  transform: translateY(-4px); /* Increased lift on hover */
+.hero .button:hover {
+  background-color: #45a049;
 }
 
-/* Product Listing Section */
+.hero-image {
+  max-width: 40%;
+  border-radius: 10px;
+}
+
+/* Product List Section */
 .product-list {
-  margin: 50px 0;
-}
-
-.product-list h2 {
-  font-size: 2.5rem; /* Increased font size */
-  margin-bottom: 30px;
-  color: #333; /* Darker color for contrast */
+  margin-top: 30px;
 }
 
 .product-list-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Space between product items */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-list h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 /* Footer Section */
 .footer {
   margin-top: 50px;
-  padding: 20px 0;
+  padding: 20px;
   background-color: #333;
   color: white;
   text-align: center;
+  border-radius: 10px;
+}
+
+.footer p {
+  margin: 0;
 }
 
 .footer a {
-  color: #f39c12; /* Highlight color for links */
+  color: #4CAF50;
   text-decoration: none;
 }
 
 .footer a:hover {
   text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem; /* Responsive font size */
-  }
-
-  .hero p {
-    font-size: 1.2rem; /* Responsive paragraph size */
-  }
-
-  .button {
-    padding: 12px 25px; /* Adjusted padding for mobile */
-    font-size: 1rem;
-  }
-
-  .product-list-items {
-    flex-direction: column; /* Stack items on small screens */
-    align-items: center; /* Center align items */
-  }
-
-  .footer {
-    font-size: 0.9rem; /* Adjust footer font size */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 50px 10px; /* Adjusted padding for very small screens */
-  }
-
-  .hero h1 {
-    font-size: 2rem; /* Smaller heading for mobile */
-  }
-
-  .hero p {
-    font-size: 0.9rem; /* Smaller paragraph for mobile */
-  }
-
-  .button {
-    padding: 10px 20px; /* Smaller button padding */
-    font-size: 0.9rem;
-  }
-
-  .footer {
-    font-size: 0.8rem; /* Smaller footer text */
-  }
 }

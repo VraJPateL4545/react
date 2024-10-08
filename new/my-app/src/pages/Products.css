@@ -1,163 +1,125 @@
-/* General layout for the products container */
 /* src/Products.css */
+
+/* General layout for the products container */
 .products-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: space-around; /* Space out product cards */
-    padding: 20px; /* Padding around the container */
-  }
-  
-  .product-card {
-    background-color: white; /* Background color for product card */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 10px; /* Margin between product cards */
-    text-align: center; /* Center align text */
-    width: 300px; /* Fixed width for the product card */
-  }
-  
-  .product-image {
-    width: 300px; /* Fixed width for the image */
-    height: 200px; /* Fixed height for the image */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 8px 8px 0 0; /* Rounded corners at the top */
-    border: 1px solid #ddd; /* Optional border */
-  }
-  
-  .product-description {
-    margin: 10px 0; /* Space above and below the description */
-  }
-  
-  .product-price {
-    font-weight: bold; /* Make price bold */
-    color: #f39c12; /* Set a color for the price */
-  }
-      
-  
-  /* Individual product card styling */
-  .product-card {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* More shadow for a floating effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 280px; /* Fixed width for better alignment */
-    text-align: center;
-    position: relative; /* For positioning elements like buttons */
-    overflow: hidden;
-  }
-  
-  /* Hover effect for product cards */
-  .product-card:hover {
-    transform: translateY(-8px); /* More pronounced hover effect */
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
-  }
-  
-  /* Title of the product */
-  .product-card h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  /* Product images styling */
-  .product-image {
-    width: 300px; /* Fixed width */
-    height: 200px; /* Fixed height */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 12px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-  }
-  
-  /* Slight zoom on image hover */
-  .product-card:hover .product-image {
-    transform: scale(1.05); /* Zoom effect on hover */
-  }
-  
-  /* Product description */
-  .product-description {
-    font-size: 0.95rem;
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.6;
-  }
-  
-  /* Product price */
-  .product-price {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #e67e22; /* Bold orange for price */
-  }
-  
-  /* Button styling */
-  button {
-    padding: 12px 20px;
-    background-color: #f39c12;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%; /* Full width button with padding */
-  }
-  
-  /* Button hover effect */
-  button:hover {
-    background-color: #e67e22;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
-  }
-  
-  /* Responsive design for smaller screens */
-  @media (max-width: 768px) {
-    .products-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-around; /* Space out product cards */
+  padding: 20px; /* Padding around the container */
+}
+
+/* Individual product card styling */
+.product-card {
+  background-color: #fff; /* Background color for product card */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 10px; /* Margin between product cards */
+  width: 300px; /* Fixed width for the product card */
+  position: relative; /* For positioning elements like buttons */
+  overflow: hidden; /* Prevent overflow of elements */
+  text-align: center; /* Center align text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transitions */
+}
+
+/* Hover effect for product cards */
+.product-card:hover {
+  transform: translateY(-8px); /* More pronounced hover effect */
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+}
+
+/* Title of the product */
+.product-card h2 {
+  font-size: 1.8rem;
+  margin: 10px 0; /* Space above and below the title */
+  color: #333; /* Dark color for the title */
+}
+
+/* Product images styling */
+.product-image {
+  width: 100%; /* Make image responsive */
+  height: 200px; /* Fixed height for the image */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 12px 12px 0 0; /* Rounded corners at the top */
+  border: 1px solid #ddd; /* Optional border */
+  margin-bottom: 15px; /* Space below the image */
+  transition: transform 0.3s ease; /* Transition for zoom effect */
+}
+
+/* Slight zoom on image hover */
+.product-card:hover .product-image {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Product description */
+.product-description {
+  font-size: 0.95rem; /* Font size for description */
+  color: #666; /* Gray color for description */
+  margin: 10px 0; /* Space above and below the description */
+  line-height: 1.6; /* Better readability */
+}
+
+/* Product price */
+.product-price {
+  font-size: 1.4rem; /* Font size for price */
+  font-weight: bold; /* Make price bold */
+  color: #e67e22; /* Bold orange for price */
+  margin: 10px 0; /* Space above and below the price */
+}
+
+/* Button styling */
+button {
+  padding: 12px 20px; /* Padding for button */
+  background-color: #f39c12; /* Button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 25px; /* Rounded button */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  position: absolute; /* Positioning for button */
+  bottom: 20px; /* Distance from the bottom */
+  left: 50%; /* Center button horizontally */
+  transform: translateX(-50%); /* Centering adjustment */
+  width: 80%; /* Full width button with padding */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #e67e22; /* Darken on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .products-container {
       flex-direction: column; /* Stack products vertically */
-      align-items: center;
-    }
-  
-    .product-card {
+      align-items: center; /* Center products */
+  }
+
+  .product-card {
       width: 100%; /* Full width on mobile */
       max-width: 400px; /* Limit width for larger mobile screens */
-      margin-bottom: 30px;
-    }
-  
-    /* Adjust image size for mobile screens */
-    .product-image {
-        width: 300px; /* Fixed width */
-        height: 200px; /* Fixed height */
-        object-fit: cover; /* Ensures the image covers the area without distortion */
-        border-radius: 12px;
-        margin-bottom: 15px;
-        border: 1px solid red; /* Temporary border for debugging */
-        transition: transform 0.3s ease;
-      }
-      
+      margin-bottom: 30px; /* Space below each card */
   }
-  
-  /* Responsive design for very small screens */
-  @media (max-width: 480px) {
-    .product-card h2 {
+}
+
+/* Responsive design for very small screens */
+@media (max-width: 480px) {
+  .product-card h2 {
       font-size: 1.5rem; /* Slightly reduce title size */
-    }
-  
-    .product-description {
-      font-size: 0.9rem; /* Adjust description for small screens */
-    }
-  
-    .product-price {
-      font-size: 1.2rem; /* Slightly smaller price font */
-    }
-  
-    button {
-      padding: 10px 15px;
-      font-size: 0.9rem;
-      width: 90%; /* Adjust button width */
-    }
   }
-  
+
+  .product-description {
+      font-size: 0.9rem; /* Adjust description for small screens */
+  }
+
+  .product-price {
+      font-size: 1.2rem; /* Slightly smaller price font */
+  }
+
+  button {
+      padding: 10px 15px; /* Smaller button padding */
+      font-size: 0.9rem; /* Smaller font size */
+      width: 90%; /* Adjust button width */
+  }
+}
